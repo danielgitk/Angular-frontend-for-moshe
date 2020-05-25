@@ -5,19 +5,24 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+
 
 import { ReactiveFormsModule } from "@angular/forms";
 import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TeachersComponent } from './teachers/teachers.component';
+import { TeachersComponent } from './teacher/teachers/teachers.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { HeaderComponent } from './header/header.component';
-import { TeacherCreateComponent } from './teacher-create/teacher-create.component';
+import { TeacherCreateComponent } from './teacher/teacher-create/teacher-create.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
-import { TeacherDetailsComponent } from './teacher-details/teacher-details.component';
+import { TeacherDetailsComponent } from './teacher/teacher-details/teacher-details.component';
+import { UnivListComponent } from './university/univ-list/univ-list.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +31,9 @@ import { TeacherDetailsComponent } from './teacher-details/teacher-details.compo
     SignupComponent,
     HeaderComponent,
     TeacherCreateComponent,
-    TeacherDetailsComponent
+    TeacherDetailsComponent,
+    UnivListComponent,
+    FooterComponent
 
   ],
   imports: [
@@ -40,7 +47,9 @@ import { TeacherDetailsComponent } from './teacher-details/teacher-details.compo
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    MatIconModule
 
   ],
   providers: [],
