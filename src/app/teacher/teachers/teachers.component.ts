@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Teacher } from '../teacher.model';
 import { MatTableDataSource } from '@angular/material/table';
+import { TeacherService } from '../teacher.service';
 
 
 @Component({
@@ -16,33 +17,53 @@ teachers : Teacher[]=[];
 'delete'
 ];
 public dataSource = new MatTableDataSource<Teacher>();
-//constructor(private repoService: RepositoryService) { }
+constructor(public teacherService:TeacherService) { }
 ngOnInit() {
-this.getAllOwners();
+this.getAllTeachers();
 }
-public getAllOwners = () => {
-// this.repoService.getData('api/owner')
+public getAllTeachers = () => {
+// this.repoService.getData('api/Teacher')
 // .subscribe(res => {
  this.teachers = 
  [{id: "dfa",
   name: "adfa",
-  dateOfBirth: Date.now(),
-  address: "string"},
-  {id: "123",
+  age: "23",
+  department: "dfadf",
+  hiredPos: "dfaa",
+  currentUniv: "fafad",
+  gradField: "fadfa",
+  gradUniv: "fdafa",
+  gradYear: "dafa"
+  },
+  {id: "dfa",
   name: "adfa",
-  dateOfBirth: Date.now(),
-  address: "string"}];
+  age: "43",
+  department: "dfadf",
+  hiredPos: "dfaa",
+  currentUniv: "fafad",
+  gradField: "fadfa",
+  gradUniv: "fdafa",
+  gradYear: "dafa"
+  }];
+
+
   this.dataSource.data = this.teachers;
 // })
 }
 
 
 public redirectToDetails = (id: string) => {
+
 }
 public redirectToUpdate = (id: string) => {
 }
-public redirectToDelete = (id: string) => {
-
+public redirectToDelete = (teacherId: string) => {
+  
+    this.teacherService.deleteTeacher(teacherId).subscribe(() => {
+      this.teacherService.getTeachers();
+    })
 
 }
+
+
 }

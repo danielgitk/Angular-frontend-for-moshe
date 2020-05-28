@@ -7,6 +7,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 
 import { ReactiveFormsModule } from "@angular/forms";
@@ -16,13 +19,15 @@ import { AppComponent } from './app.component';
 import { TeachersComponent } from './teacher/teachers/teachers.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './navigation/header/header.component';
 import { TeacherCreateComponent } from './teacher/teacher-create/teacher-create.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { TeacherDetailsComponent } from './teacher/teacher-details/teacher-details.component';
 import { UnivListComponent } from './university/univ-list/univ-list.component';
 import { FooterComponent } from './footer/footer.component';
+import { LayoutComponent } from './layout/layout.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +38,9 @@ import { FooterComponent } from './footer/footer.component';
     TeacherCreateComponent,
     TeacherDetailsComponent,
     UnivListComponent,
-    FooterComponent
+    FooterComponent,
+    LayoutComponent,
+    SidenavListComponent
 
   ],
   imports: [
@@ -49,7 +56,10 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     HttpClientModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatListModule 
 
   ],
   providers: [],
