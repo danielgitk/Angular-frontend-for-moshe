@@ -18,7 +18,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TeachersComponent } from './teacher/teachers/teachers.component';
 import { LoginComponent } from './auth/login/login.component';
-import { SignupComponent } from './auth/signup/signup.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { TeacherCreateComponent } from './teacher/teacher-create/teacher-create.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,19 +27,20 @@ import { UnivListComponent } from './university/univ-list/univ-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { AddAdminComponent } from './auth/add-admin/add-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
     TeachersComponent,
     LoginComponent,
-    SignupComponent,
     HeaderComponent,
     TeacherCreateComponent,
     TeacherDetailsComponent,
     UnivListComponent,
     FooterComponent,
     LayoutComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    AddAdminComponent
 
   ],
   imports: [

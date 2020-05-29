@@ -28,10 +28,28 @@
 
         <mat-error *ngIf="passwordInput.invalid"> Enter a valid password. </mat-error>
   
+      
     </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+      name="university"
+      ngModel
+      type="text"
+      required
+      email
+      #university="ngModel"
+             
+      
+      placeholder="university name">
+
+      <mat-error *ngIf="university.invalid"> enter valid university name </mat-error>
+    </mat-form-field>
+
+    
     <button mat-raised-button 
     color="accent"
-    type="submit" > signup</button>
+    type="submit" > Add admin</button>
   
     </form>
   

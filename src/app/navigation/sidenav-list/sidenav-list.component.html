@@ -3,12 +3,20 @@
     <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
     </a>
     <a mat-list-item routerLink="/teachers" (click)="onSidenavClose()">
-    <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">Owner
+    <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">Account
     Actions</span>
+    </a>
+    <a mat-list-item routerLink="#" (click)="addAdmins()">
+    <mat-icon>account_balance</mat-icon><span class="nav-caption">add admins</span>
     </a>
     <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-    <mat-icon>account_balance</mat-icon><span class="nav-caption">Account
-    Actions</span>
-    </a>
+        <mat-icon>account_balance</mat-icon><span class="nav-caption">universities list</span>
+        </a>
+        <a mat-list-item routerLink="#" (click)="onSidenavClose()">
+            <mat-icon>account_balance</mat-icon><span class="nav-caption">add universities</span>
+            </a>
+            <a mat-list-item routerLink="#" (click)="onSidenavClose()">
+                <mat-icon>account_balance</mat-icon><span class="nav-caption">suspected cases list</span>
+                </a>
     </mat-nav-list>
     

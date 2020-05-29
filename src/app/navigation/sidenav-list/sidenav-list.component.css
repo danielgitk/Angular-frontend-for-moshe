@@ -3,6 +3,7 @@ a{
 text-decoration:none;
 color: white;
 display: block;
+margin-top: 1rem;
 }
 
 a:hover, a:active {

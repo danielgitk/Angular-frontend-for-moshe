@@ -3,11 +3,11 @@ import { AuthService } from '../auth.service';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  selector: 'app-add-admin',
+  templateUrl: './add-admin.component.html',
+  styleUrls: ['./add-admin.component.css']
 })
-export class SignupComponent implements OnInit {
+export class AddAdminComponent implements OnInit {
 
   constructor(public authService: AuthService) { }
 

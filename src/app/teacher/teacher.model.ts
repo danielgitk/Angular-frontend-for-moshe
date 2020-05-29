@@ -1,5 +1,5 @@
 export interface Teacher {
-    id: string;
+  id: string;
   name: string;
   age: string;
   department: string;
