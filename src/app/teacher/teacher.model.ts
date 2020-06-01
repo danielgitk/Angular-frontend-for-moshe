@@ -1,7 +1,7 @@
 export interface Teacher {
   id: string;
   name: string;
-  age: string;
+  age: number;
   department: string;
   hiredPos: string;
   gradYear: string;

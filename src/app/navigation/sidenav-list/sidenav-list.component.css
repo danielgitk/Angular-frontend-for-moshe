@@ -13,4 +13,6 @@ color: lightgray;
 display: inline-block;
 padding-left: 6px;
 }
-
+mat-menu {
+    width: 100%;
+}

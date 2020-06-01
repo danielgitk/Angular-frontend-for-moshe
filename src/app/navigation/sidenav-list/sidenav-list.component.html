@@ -6,17 +6,24 @@
     <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">Account
     Actions</span>
     </a>
-    <a mat-list-item routerLink="#" (click)="addAdmins()">
-    <mat-icon>account_balance</mat-icon><span class="nav-caption">add admins</span>
+    <a mat-list-item routerLink="#" [matMenuTriggerFor]="menu" >
+    <mat-icon>person_add</mat-icon><span class="nav-caption">add admins</span>
     </a>
+    <mat-menu #menu="matMenu">
+        <a mat-menu-item (click)="addAdmins()">university admin</a>
+        <a mat-menu-item (click)="onSidenavClose()">Add contact</a>
+        </mat-menu>
     <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-        <mat-icon>account_balance</mat-icon><span class="nav-caption">universities list</span>
+        <mat-icon>school</mat-icon><span class="nav-caption">universities list</span>
         </a>
         <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-            <mat-icon>account_balance</mat-icon><span class="nav-caption">add universities</span>
+            <mat-icon>school</mat-icon><span class="nav-caption">add universities</span>
             </a>
             <a mat-list-item routerLink="#" (click)="onSidenavClose()">
-                <mat-icon>account_balance</mat-icon><span class="nav-caption">suspected cases list</span>
+                <mat-icon>notifications</mat-icon><span class="nav-caption">suspected cases list</span>
                 </a>
+                
+                   
+                    
     </mat-nav-list>
     

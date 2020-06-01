@@ -61,14 +61,14 @@ export class TeacherService{
 
     }
     getTeacher(teacherId:string){
-        return this.http.get<{}>("http://localhost:3000/"+teacherId);
+        return this.http.get<{_id:string,name: string,age: number,department: string,hiredPos: string,gradYear: string,gradField: string,gradUniv: string,currentUniv: string}>("http://localhost:3000/"+teacherId);
 
     }
     deleteTeacher(teacherId: string){
         return this.http.delete("http://localhost:3000"+teacherId);
     }
 
-    updateTeacher(teacherId: string){
+    updateTeacher(teacherId:string,name: string,age: number,department: string,hiredPos: string,gradYear: string,gradField: string,gradUniv: string,currentUniv: string){
 
     }
 }

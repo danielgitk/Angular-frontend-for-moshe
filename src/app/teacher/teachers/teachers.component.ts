@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { Teacher } from '../teacher.model';
 import { MatTableDataSource } from '@angular/material/table';
 import { TeacherService } from '../teacher.service';
 import { Router } from '@angular/router';
+import { MatSort } from '@angular/material/sort';
 
 
 @Component({
@@ -10,25 +11,30 @@ import { Router } from '@angular/router';
   templateUrl: './teachers.component.html',
   styleUrls: ['./teachers.component.css']
 })
-export class TeachersComponent implements OnInit {
+export class TeachersComponent implements OnInit ,AfterViewInit{
 
   
 teachers : Teacher[]=[];
-  public displayedColumns = ['name', 'age', 'department', 'details', 'edit',
+  public displayedColumns = ['name', 'age', 'department','currentUniv', 'details', 'edit',
 'delete'
 ];
 public dataSource = new MatTableDataSource<Teacher>();
+@ViewChild(MatSort) sort: MatSort;
 constructor(public teacherService:TeacherService, public router:Router) { }
 ngOnInit() {
 this.getAllTeachers();
+}
+
+ngAfterViewInit():void {
+  this.dataSource.sort = this.sort;
 }
 public getAllTeachers = () => {
 // this.repoService.getData('api/Teacher')
 // .subscribe(res => {
  this.teachers = 
- [{id: "dfa",
-  name: "adfa",
-  age: "23",
+ [{id: "dqwe",
+  name: "fdaafa",
+  age: 23,
   department: "dfadf",
   hiredPos: "dfaa",
   currentUniv: "fafad",
@@ -38,7 +44,7 @@ public getAllTeachers = () => {
   },
   {id: "df3343a",
   name: "adfa",
-  age: "43",
+  age: 43,
   department: "dfadf",
   hiredPos: "dfaa",
   currentUniv: "fafad",
@@ -55,6 +61,7 @@ public getAllTeachers = () => {
 
 public redirectToDetails = (id: string) => {
 console.log("details clicked");
+this.router.navigate(['/details'])
 
 }
 public redirectToUpdate = (id: string) => {

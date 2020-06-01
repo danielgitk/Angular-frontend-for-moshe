@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-
+import { MatMenuModule } from '@angular/material/menu';
 
 import { ReactiveFormsModule } from "@angular/forms";
 import { FormsModule } from "@angular/forms";
@@ -28,6 +28,8 @@ import { FooterComponent } from './footer/footer.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { AddAdminComponent } from './auth/add-admin/add-admin.component';
+import { MatSortModule } from '@angular/material/sort';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +61,9 @@ import { AddAdminComponent } from './auth/add-admin/add-admin.component';
     MatIconModule,
     FlexLayoutModule,
     MatSidenavModule,
-    MatListModule 
+    MatListModule ,
+    MatMenuModule,
+    MatSortModule
 
   ],
   providers: [],
